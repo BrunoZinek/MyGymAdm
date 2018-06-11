@@ -1,0 +1,11 @@
+.div-iframe{
+    float: right ;
+    height: 630px !important;
+    width: 100% !important;
+}
+.iframe{
+    border: none;
+    width: 100% !important;
+    height: 100% !important;
+    
+}

@@ -1,0 +1,22 @@
+td{
+    border:  1px solid silver !important;
+    width: 70px !important;
+    padding: 2px !important;
+}
+
+tr{
+   line-height: 10px !important;
+}
+th{
+    border:  1px solid silver !important;
+    width: 30px !important;
+    color: #14cea6;
+}
+.card.tabela-evol{
+    margin:0;
+    padding: 10px;
+}
+input{
+    border: none;
+    border-bottom: 1px solid silver;
+}

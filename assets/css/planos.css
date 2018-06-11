@@ -1,0 +1,13 @@
+
+input.center{
+    text-align: center;
+    width: 100% !important;
+}
+.no-border{
+    border: none;
+    background-color: #fff;
+}
+tr button{
+    padding: initial !important;
+    margin: 0 0 0 20px !important;
+}
