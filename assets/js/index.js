@@ -1,11 +1,32 @@
-$(function(){
-  $('#entrar').click(logar);
+$(function () {
   $('#btnSalvarTreinoTeste').click(treinoTesteSalvar);
+  $('#entrar').click(logar);
+
+  $('#user').keypress(function (e) {
+    if (e.which == 13) {
+      $('#password').focus();
+    }
+  });
+  $('#password').keypress(function (e) {
+    if (e.which == 13) {
+      logar();
+    }
+  });
+  //Recuperar Senha
+  $('#recSenha').click(enviarSenha);
   dataMaxima();
 });
 
 function logar() {
-    alert("foi")
+  if (!$('#user').val() || !$('#password').val()) {
+    alert("Favor preencher os campos login e senha");
+  } else {
+    if ($('#user').val() == 'adm' && $('#password').val() == 'adm') {
+      window.location.href = "home.html";
+    } else {
+      alert("Login ou senha incorreto!");
+    }
+  }
 }
 
 function exit() {
@@ -38,7 +59,12 @@ function voltar() {
   window.history.back();
 }
 function enviarSenha() {
-  alert("Senha enviada para o celular/email informado")
+  if (!$('#user').val()) {
+    alert("Favor preencher os campos login ");
+  } else
+    alert("Senha enviada para o email informado");
+    $('#user').val("");
+    $('#user').focus();
 }
 function excluirCliente() {
   if (confirm("Deseja excluir o cliente 'Bruno Paulino Zinek'?")) {
@@ -55,7 +81,7 @@ function excluirTreino() {
     alert("Treino excluido com sucesso!");
   }
 }
-function adicionarTreino(){
+function adicionarTreino() {
   $("#novoExerc").show();
   $("#iptSerie").prop("disabled", true);
   $("#iptRepeticao").prop("disabled", true);
@@ -75,29 +101,29 @@ function excluirPlano() {
   }
 }
 function salvarTreino(num) {
-  $("#iptSerie"+num).prop("disabled",true);
-  $("#iptRepeticao"+num).prop("disabled",true);
-  $("#edit"+num).show();
-  $("#save"+num).hide();
+  $("#iptSerie" + num).prop("disabled", true);
+  $("#iptRepeticao" + num).prop("disabled", true);
+  $("#edit" + num).show();
+  $("#save" + num).hide();
 }
 
 function editarTreino(num) {
-  $("#iptSerie"+num).prop("disabled",false);
-  $("#iptRepeticao"+num).prop("disabled",false);
-  $("#edit"+num).hide();
-  $("#save"+num).show();
-  
+  $("#iptSerie" + num).prop("disabled", false);
+  $("#iptRepeticao" + num).prop("disabled", false);
+  $("#edit" + num).hide();
+  $("#save" + num).show();
+
 }
 
 function treinoTesteSalvar() {
- if($("#iptSerie1").prop("disabled")==false ||
- $("#iptSerie2").prop("disabled")==false ||
- $("#iptSerie3").prop("disabled")==false ||
- $("#iptSerie4").prop("disabled")==false ||
- $("#iptSerie5").prop("disabled")==false ||
- $("#iptSerie6").prop("disabled")==false){
+  if ($("#iptSerie1").prop("disabled") == false ||
+    $("#iptSerie2").prop("disabled") == false ||
+    $("#iptSerie3").prop("disabled") == false ||
+    $("#iptSerie4").prop("disabled") == false ||
+    $("#iptSerie5").prop("disabled") == false ||
+    $("#iptSerie6").prop("disabled") == false) {
     alert("Favor salvar todos os campos.")
-  }else{
+  } else {
     alert("Treino alterado com sucesso!");
     window.location.href = "treino_teste.html";
   }
@@ -108,10 +134,10 @@ function dataMaxima() {
   var ano = new Date().getFullYear();
 
   if (dia < 10) {
-      dia = '0' + dia;
+    dia = '0' + dia;
   }
   if (mes < 10) {
-      mes = '0' + mes;
+    mes = '0' + mes;
   }
   var dataAtual = ano + '-' + mes + '-' + dia;
 
