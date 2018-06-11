@@ -19,18 +19,19 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-    <!-- Scripts -->
-    <script type="text/javascript" src="../assets/js/index.js"></script>
+
 </head>
 
 <body>
     <div class="wrapper">
         <!--INICIO DA BARRA LATERAL-->
         <div class="sidebar" data-color="aqua" data-image="../assets/img/sidebar-1.jpg">
-            <div class="logo"><a href="home.html" title="Página Inicial">
+            <div class="logo">
                 <a href="home.html" title="Página Inicial">
-                <img src="../assets/img/logo.png" width="230" class="simple-text"> Funcionário: Fulano
-                </a>
+                    <a href="home.html" title="Página Inicial">
+                        <img src="../assets/img/logo.png" width="230" class="simple-text">
+                    </a>
+                    <label>Funcionário: Fulano de Tal</label>
             </div>
             <!--INICIO DO MENU-->
             <div class="sidebar-wrapper">
@@ -107,7 +108,7 @@
                                     <tbody>
                                         <tr>
                                             <td>01</td>
-                                            <td>Bruno Zinek</td>
+                                            <td id="nome1">Bruno Zinek</td>
                                             <td>01/01/2018</td>
                                             <td>29/06/1989 </td>
                                             <td> Musculação Easy</td>
@@ -126,17 +127,17 @@
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" align="right" rel="tooltip" title="Excluir" onclick="excluirCliente()" class="btn btn-danger btn-simple btn-xs">
+                                                <button id='1' onclick="excluirCliente(id)" type="button" align="right" rel="tooltip" title="Excluir" id="1" class="btn btn-danger btn-simple btn-xs">
                                                     <i class="material-icons">close</i>
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>02</td>
-                                            <td>Diego Rosa</td>
+                                            <td id="nome2">Diego Rosa</td>
                                             <td>01/01/2018</td>
                                             <td>10/10/1990 </td>
-                                            <td>  Musculação Easy </td>
+                                            <td> Musculação Easy </td>
                                             <td>
                                                 <button type="button" align="right" rel="tooltip" title="Detalhes" class="btn btn-primary btn-simple btn-xs">
                                                     <a href="perfil.html">
@@ -150,17 +151,17 @@
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" align="right" rel="tooltip" title="Excluir" class="btn btn-danger btn-simple btn-xs">
+                                                <button id='2' onclick="excluirCliente(id)" type="button" align="right" rel="tooltip" title="Excluir" class="btn btn-danger btn-simple btn-xs">
                                                     <i class="material-icons">close</i>
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>03</td>
-                                            <td>João Pedro</td>
+                                            <td id="nome3">João Pedro</td>
                                             <td>01/01/2018</td>
                                             <td>10/10/1995 </td>
-                                            <td>  Musculação Easy </td>
+                                            <td> Musculação Easy </td>
                                             <td>
                                                 <button type="button" align="right" rel="tooltip" title="Detalhes" class="btn btn-primary btn-simple btn-xs">
                                                     <a href="perfil.html">
@@ -174,31 +175,7 @@
                                                 </button>
                                             </td>
                                             <td>
-                                                <button type="button" align="right" rel="tooltip" title="Excluir" class="btn btn-danger btn-simple btn-xs">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>04</td>
-                                            <td>Maria Silva</td>
-                                            <td>01/01/2018</td>
-                                            <td>10/10/1970 </td>
-                                            <td>  Musculação Easy </td>
-                                            <td>
-                                                <button type="button" align="right" rel="tooltip" title="Detalhes" class="btn btn-primary btn-simple btn-xs">
-                                                    <a href="perfil.html">
-                                                        <i class="material-icons">remove_red_eye</i>
-                                                    </a>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" align="right" rel="tooltip" title="Treino" class="btn btn-primary btn-simple btn-xs">
-                                                    <i class="material-icons">fitness_center</i>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button type="button" align="right" rel="tooltip" title="Excluir" class="btn btn-danger btn-simple btn-xs">
+                                                <button id='3' onclick="excluirCliente(id)" type="button" align="right" rel="tooltip" title="Excluir" class="btn btn-danger btn-simple btn-xs">
                                                     <i class="material-icons">close</i>
                                                 </button>
                                             </td>
@@ -230,7 +207,8 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Material Dashboard javascript methods -->
 <script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
+<!-- Scripts -->
+<script type="text/javascript" src="../assets/js/index.js"></script>
+<script type="text/javascript" src="../assets/js/home.js"></script>
 
 </html>

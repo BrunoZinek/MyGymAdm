@@ -66,11 +66,7 @@ function enviarSenha() {
     $('#user').val("");
     $('#user').focus();
 }
-function excluirCliente() {
-  if (confirm("Deseja excluir o cliente 'Bruno Paulino Zinek'?")) {
-    alert("Cliente excluido com sucesso!");
-  }
-}
+
 function excluirExercicio() {
   if (confirm("Deseja excluir o exercício 'Supino Reto' ?")) {
     alert("Exercício excluido com sucesso!");
