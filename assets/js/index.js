@@ -1,4 +1,8 @@
-/*function exit() {
+$(function(){
+  $('#btnSalvarTreinoTeste').click(treinoTesteSalvar)
+});
+
+function exit() {
   if (confirm("Deseja sair?")) {
     window.location.href = "index.html";
   }
@@ -65,109 +69,30 @@ function excluirPlano() {
   }
 }
 function salvarTreino(num) {
-  if (num == 1) {
-    $("#iptSerie1").prop("disabled",true);
-    $("#iptRepeticao1").prop("disabled",true);
-    $("#edit1").show();
-    $("#save1").hide();
-  }
-  if (num == 2) {
-    $("#iptSerie2").prop("disabled",true);
-    $("#iptRepeticao2").prop("disabled",true);
-    $("#edit2").show();
-    $("#save2").hide();
-  }
-  if (num == 3) {
-    $("#iptSerie3").prop("disabled",true);
-    $("#iptRepeticao3").prop("disabled",true);
-    $("#edit3").show();
-    $("#save3").hide();
-  }
+  $("#iptSerie"+num).prop("disabled",true);
+  $("#iptRepeticao"+num).prop("disabled",true);
+  $("#edit"+num).show();
+  $("#save"+num).hide();
 }
+
 function editarTreino(num) {
-  if (num == 1) {
-    $("#iptSerie1").prop("disabled",false);
-    $("#iptRepeticao1").prop("disabled",false);
-    $("#edit1").hide();
-    $("#save1").show();
-  }
-  if (num == 2) {
-    $("#iptSerie2").prop("disabled",false);
-    $("#iptRepeticao2").prop("disabled",false);
-    $("#edit2").hide();
-    $("#save2").show();
-  }
-  if (num == 3) {
-    $("#iptSerie3").prop("disabled",false);
-    $("#iptRepeticao3").prop("disabled",false);
-    $("#edit3").hide();
-    $("#save3").show();
-  }
+  $("#iptSerie"+num).prop("disabled",false);
+  $("#iptRepeticao"+num).prop("disabled",false);
+  $("#edit"+num).hide();
+  $("#save"+num).show();
+  
 }
 
-*/
-// App
-
-$(function () {
-  $.ajaxSetup({ timeout: 10000 });
-  // Logar
-  $('#entrar').click(logar);
-
-  $('#user').keypress(function (e) {
-      if (e.which == 13) {
-          $('#password').focus();
-      }
-  });
-  $('#password').keypress(function (e) {
-      if (e.which == 13) {
-          logar();
-      }
-  });
-  //Recuperar Senha
-  $('#recSenha').click(recuperarSenha);
-});
-
-function logar() {
-  if (!$('#user').val() || !$('#password').val()) {
-      alert("Favor preencher os campos login e senha");
-  } else {
-      var login = $('#user').val();
-      var senha = $('#password').val();
-      var dados = {
-          login: login,
-          senha: senha
-      }
-      $('.box-spinner').toggle();
-      $.post('http://localhost/mygym/logar.php', dados, function (data) {
-          if (data.autenticado == 1) {
-              window.localStorage.setItem('login', login);
-              window.localStorage.setItem('senha', senha);
-              window.location.href = "home.html";
-          } else {
-              alert("Login ou senha incorreto!");
-          }
-      }).fail(function () {
-          alert("Sistema indisponivel. Tente novamente mais tarde!");
-      }).always(function () {
-          $('.box-spinner').toggle();
-      })
-  }
-}
-
-function recuperarSenha() {
-  if (!$('#user').val()) {
-      alert("Favor preencher os campos login e senha");
-  } else {
-      $.get('https://api.myjson.com/bins/1gdbwn', login, function (data) {
-          if (data.autenticado == 1) {
-              alert("Senha enviada para o email informado.");
-          } else {
-              alert("Login incorreto!");
-          }
-      }).fail(function () {
-          alert("Sistema indisponivel. Tente novamente mais tarde!");
-      }).always(function () {
-          $('.box-spinner').toggle();
-      })
+function treinoTesteSalvar() {
+ if($("#iptSerie1").prop("disabled")==false ||
+ $("#iptSerie2").prop("disabled")==false ||
+ $("#iptSerie3").prop("disabled")==false ||
+ $("#iptSerie4").prop("disabled")==false ||
+ $("#iptSerie5").prop("disabled")==false ||
+ $("#iptSerie6").prop("disabled")==false){
+    alert("Favor salvar todos os campos.")
+  }else{
+    alert("Treino alterado com sucesso!");
+    window.location.href = "treino_teste.html";
   }
 }

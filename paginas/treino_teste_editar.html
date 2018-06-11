@@ -19,16 +19,16 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-    <!-- Scripts -->
-    <script type="text/javascript" src="../assets/js/index.js"></script>
+
 </head>
 
 <body>
     <div class="wrapper">
         <!--INICIO DA BARRA LATERAL-->
         <div class="sidebar" data-color="aqua" data-image="../assets/img/sidebar-1.jpg">
-            <div class="logo"><a href="home.html" title="Página Inicial">
-                <img src="../assets/img/logo.png" width="230" class="simple-text"> Funcionário: Fulano
+            <div class="logo">
+                <a href="home.html" title="Página Inicial">
+                    <img src="../assets/img/logo.png" width="230" class="simple-text"> Funcionário: Fulano
                 </a>
             </div>
             <!--INICIO DO MENU-->
@@ -85,7 +85,7 @@
                             </div>
                             <div class="card card-content table-responsive  btn-group btn-group-raised">
                                 <label class="primary-text" style="margin:0px; padding: 0">
-                                    <h3>Personalizado</h3>
+                                    <h3>Quarta-Feira</h3>
                                 </label>
                                 <table id="tblItens" class="table">
                                     <thead class="text-primary">
@@ -104,22 +104,22 @@
                                             <td>Peito</td>
                                             <td>
                                                 <input type="text" style="text-align: center" id="iptSerie1" value="3">
-                                               
+
                                             </td>
                                             <td>
-                                                <input type="text" style="text-align: center" id="iptRepeticao1" value="10">
-                                               
+                                                <input type="text" style="text-align: center" id="iptRepeticao1" value="15">
+
                                             </td>
                                             <td>
                                                 <button id="save1" type="button" align="left" rel="tooltip" title="Salvar" class="btn btn-primary btn-simple btn-xs">
-                                                    <a href="#" onclick="salvarTreino(1)">
+                                                    <a href="#" id='1' onclick="salvarTreino(id)">
                                                         <i class="material-icons">save</i>
                                                         </>
                                                 </button>
                                             </td>
                                             <td>
                                                 <button id="edit1" type="button" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs" style="display:none">
-                                                    <a href="#" onclick="editarTreino(1)">
+                                                    <a href="#" id='1' onclick="editarTreino(id)">
                                                         <i class="material-icons">editar</i>
                                                         </>
                                                 </button>
@@ -127,26 +127,26 @@
                                         </tr>
                                         <tr>
                                             <td>02</td>
-                                            <td>Supino Reclinado</td>
+                                            <td>Supino Inclinado</td>
                                             <td>Peito</td>
                                             <td>
                                                 <input type="text" style="text-align: center" id="iptSerie2" value="3">
-                                                
+
                                             </td>
                                             <td>
-                                                <input type="text" style="text-align: center" id="iptRepeticao2" value="10">
-                                               
+                                                <input type="text" style="text-align: center" id="iptRepeticao2" value="15">
+
                                             </td>
                                             <td>
                                                 <button id="save2" type="button" align="left" rel="tooltip" title="Salvar" class="btn btn-primary btn-simple btn-xs">
-                                                    <a href="#" onclick="salvarTreino(2)">
+                                                    <a href="#" id='2' onclick="salvarTreino(id)">
                                                         <i class="material-icons">save</i>
                                                         </>
                                                 </button>
                                             </td>
                                             <td>
                                                 <button id="edit2" type="button" align="left" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs" style="display:none">
-                                                    <a href="#" onclick="editarTreino(2)">
+                                                    <a href="#" id='2' onclick="editarTreino(id)">
                                                         <i class="material-icons">editar</i>
                                                         </>
                                                 </button>
@@ -158,22 +158,103 @@
                                             <td>Peito</td>
                                             <td>
                                                 <input type="text" style="text-align: center" id="iptSerie3" value="3">
-                                                
+
                                             </td>
                                             <td>
-                                                <input type="text" style="text-align: center" id="iptRepeticao3" value="10">
-                                                
+                                                <input type="text" style="text-align: center" id="iptRepeticao3" value="15">
+
                                             </td>
                                             <td>
                                                 <button id="save3" type="button" align="left" rel="tooltip" title="Salvar" class="btn btn-primary btn-simple btn-xs">
-                                                    <a href="#" onclick="salvarTreino(3)">
+                                                    <a href="#" id='3' onclick="salvarTreino(id)">
                                                         <i class="material-icons">save</i>
                                                         </>
                                                 </button>
                                             </td>
                                             <td>
                                                 <button id="edit3" type="button" align="left" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs" style="display:none">
-                                                    <a href="#" onclick="editarTreino(3)">
+                                                    <a href="#" id='3' onclick="editarTreino(id)">
+                                                        <i class="material-icons">editar</i>
+                                                        </>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class="linha1">
+                                            <td>04</td>
+                                            <td>Rosca Direta</td>
+                                            <td>Biceps</td>
+                                            <td>
+                                                <input type="text" style="text-align: center" id="iptSerie4" value="3">
+
+                                            </td>
+                                            <td>
+                                                <input type="text" style="text-align: center" id="iptRepeticao4" value="10">
+
+                                            </td>
+                                            <td>
+                                                <button id="save4" type="button" align="left" rel="tooltip" title="Salvar" class="btn btn-primary btn-simple btn-xs">
+                                                    <a href="#" id='4' onclick="salvarTreino(id)">
+                                                        <i class="material-icons">save</i>
+                                                        </>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button id="edit4" type="button" align="left" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs" style="display:none">
+                                                    <a href="#" id='4' onclick="editarTreino(id)">
+                                                        <i class="material-icons">editar</i>
+                                                        </>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>Rosca Alternada</td>
+                                            <td>Biceps</td>
+                                            <td>
+                                                <input type="text" style="text-align: center" id="iptSerie5" value="3">
+
+                                            </td>
+                                            <td>
+                                                <input type="text" style="text-align: center" id="iptRepeticao5" value="10">
+
+                                            </td>
+                                            <td>
+                                                <button id="save5" type="button" align="left" rel="tooltip" title="Salvar" class="btn btn-primary btn-simple btn-xs">
+                                                    <a href="#" id='5' onclick="salvarTreino(id)">
+                                                        <i class="material-icons">save</i>
+                                                        </>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button id="edit5" type="button" align="left" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs" style="display:none">
+                                                    <a href="#" id='5' onclick="editarTreino(id)">
+                                                        <i class="material-icons">editar</i>
+                                                        </>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class="linha3">
+                                            <td>06</td>
+                                            <td>Scott</td>
+                                            <td>Biceps</td>
+                                            <td>
+                                                <input type="text" style="text-align: center" id="iptSerie6" value="3">
+
+                                            </td>
+                                            <td>
+                                                <input type="text" style="text-align: center" id="iptRepeticao6" value="10">
+
+                                            </td>
+                                            <td>
+                                                <button id="save6" type="button" align="left" rel="tooltip" title="Salvar" class="btn btn-primary btn-simple btn-xs">
+                                                    <a href="#" id='6' onclick="salvarTreino(id)">
+                                                        <i class="material-icons">save</i>
+                                                        </>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button id="edit6" type="button" align="left" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs" style="display:none">
+                                                    <a href="#" id='6' onclick="editarTreino(id)">
                                                         <i class="material-icons">editar</i>
                                                         </>
                                                 </button>
@@ -181,7 +262,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button style="margin: 10px 0px 0 10px" type="submit" class="btn btn-primary pull-right">Salvar</button>
+                                <button style="margin: 10px 0px 0 10px" type="button" id='btnSalvarTreinoTeste' class="btn btn-primary pull-right">Salvar</button>
                                 <button style="margin: 10px 0px 0 10px" type="button" onclick="window.open('treino_teste.html','_self')" class="btn btn-primary pull-right">Voltar</button>
                             </div>
                             <div>
@@ -209,7 +290,7 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Material Dashboard javascript methods -->
 <script src="../assets/js/material-dashboard.js?v=1.2.0"></script>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
+<!-- Scripts -->
+<script type="text/javascript" src="../assets/js/index.js"></script>
 
 </html>
