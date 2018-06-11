@@ -10,3 +10,8 @@
 .exe-exercicio{
     height: 145px !important;
 }
+
+.selectize-input{
+    margin: -7px 0 !important;
+    height: 2.5em;
+}

@@ -1,10 +1,7 @@
-.btn-cadastrar{
+.btn-cadastrar, .btn-atualizar{
     bottom: 10px !important;
 }
 
-.btn-atualizar{
-    bottom: -10px !important;
-}
 .cad-aula{
     height: 150px;
 }
