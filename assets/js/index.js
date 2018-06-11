@@ -1,6 +1,12 @@
 $(function(){
-  $('#btnSalvarTreinoTeste').click(treinoTesteSalvar)
+  $('#entrar').click(logar);
+  $('#btnSalvarTreinoTeste').click(treinoTesteSalvar);
+  dataMaxima();
 });
+
+function logar() {
+    alert("foi")
+}
 
 function exit() {
   if (confirm("Deseja sair?")) {
@@ -95,4 +101,20 @@ function treinoTesteSalvar() {
     alert("Treino alterado com sucesso!");
     window.location.href = "treino_teste.html";
   }
+}
+function dataMaxima() {
+  var dia = new Date().getDate();
+  var mes = new Date().getMonth() + 1;
+  var ano = new Date().getFullYear();
+
+  if (dia < 10) {
+      dia = '0' + dia;
+  }
+  if (mes < 10) {
+      mes = '0' + mes;
+  }
+  var dataAtual = ano + '-' + mes + '-' + dia;
+
+  $('#dataAfericao').attr('max', dataAtual);
+  $('#dataAfericao').attr('value', dataAtual);
 }
