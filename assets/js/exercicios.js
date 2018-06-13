@@ -3,6 +3,9 @@ $(function () {
         create: true,
         sortField: 'text'
     });
+    $('#planos').selectize({
+        sortField: 'text'
+    });
     $('#lglExec').click(function (e) {
         e.preventDefault();
         $('#ExecGif').click();

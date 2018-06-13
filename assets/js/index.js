@@ -73,7 +73,7 @@ function excluirExercicio() {
   }
 }
 function excluirTreino() {
-  if (confirm("Deseja excluir o treino 'Adaptação'?")) {
+  if (confirm("Deseja excluir o treino 'Quarta-Feira'?")) {
     alert("Treino excluido com sucesso!");
   }
 }

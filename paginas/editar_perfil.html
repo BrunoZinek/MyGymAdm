@@ -15,6 +15,9 @@
     <link href="../assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
     <!--  CSS   -->
     <link href="../assets/css/geral.css" rel="stylesheet" />
+    <link href="../assets/css/exercicios.css" rel="stylesheet" />
+    <link href="../assets/css/selectize.default.css" rel="stylesheet" />
+    <link href="../assets/css/perfil.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -161,8 +164,12 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group label-floating">
-                                                                <label class="control-label">Plano</label>
-                                                                <input type="text" value="Musculação Easy" class="form-control" >
+                                                                    <label class="control-label">Plano</label>
+                                                                <select id="planos" class="planos">
+                                                                    <option value="1">Musculação Easy</option>
+                                                                    <option value="2">Musculação Medium</option>
+                                                                    <option value="3">Musculação Hard</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -193,15 +200,16 @@
                                                         <br> Altura: 1,77cm
                                                         <br> IMC: 20
                                                         <br> Gordura: 15%
-                                                        <br><strong> Medidas:</strong>
-                                                        <br> Biceps: 
-                                                        <br> Antebraço:
-                                                        <br> Peito:
-                                                        <br> Abdomen:
-                                                        <br> Quadril:
-                                                        <br> Panturrilha:
-                                                        <br> Coxa:
-                                                        <br> Pescoço:
+                                                        <br>
+                                                        <strong> Medidas (cm):</strong>
+                                                        <br> Biceps: 28
+                                                        <br> Antebraço: 32
+                                                        <br> Peito: 107
+                                                        <br> Abdomen: 80
+                                                        <br> Quadril: 97
+                                                        <br> Panturrilha: 39
+                                                        <br> Coxa: 59
+                                                        <br> Pescoço: 41
                                                         <br> Matrícula: 01/01/2018
                                                         <br>
                                                         <button type="button" onclick="window.open('evolucao.html','_self');" class="btn btn-primary ">Editar</button>
@@ -238,4 +246,6 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 
+<script src="../assets/js/selectize.js"></script>
+<script type="text/javascript" src="../assets/js/exercicios.js"></script>
 </html>
